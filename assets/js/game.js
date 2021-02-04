@@ -32,7 +32,10 @@ enemyNames[0];
 
 
 var fight = function (enemyName) {
-    window.alert("Welcome to Robot Gladiators!");
+
+    while(enemyHealth > 0) {
+
+    
 
 
 
@@ -78,10 +81,12 @@ var fight = function (enemyName) {
             } else {
                 fight();
             }
-        
-    }
 
+    }
+}
 
 for(var i = 0; i < enemyNames.length; i++) {
-    fight(enemyNames[i]);
+    var pickedEnemyName = enemyNames[i];
+    enemyHealth = 50;
+    fight(pickedEnemyName);
 }
