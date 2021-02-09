@@ -180,8 +180,19 @@ var shop = function() {
     }
 }
 
+var getPlayerName = function() {
+    var name = "";
+
+    while (name === "" || name === null) {
+        name = prompt("What is your robot's name?")
+    }
+
+    console.log("Your robot's name is null + name");
+    return name;
+}
+
 var playerInfo = {
-    name: window.prompt("What is your robot's name?"),
+    name: getPlayerName(),
     health: 100,
     attack: 10,
     money: 10,
@@ -209,6 +220,7 @@ var playerInfo = {
         else {
             window.alert("You don't have enough money!");
         }
+    }
 };
 
 console.log(playerInfo.name, playerInfo.attack, playerInfo.health);
